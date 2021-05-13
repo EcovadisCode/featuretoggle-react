@@ -13,11 +13,13 @@
   "author": "Jakub Gawlikowski",
   "license": "ISC",
   "dependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2"
+    "react": "^16.2.0",
+    "prop-types": "15.6.0"
   },
   "devDependencies": {
-    "jest": "^26.6.3",
-    "jest-enzyme": "^7.1.2"
+    "enzyme-adapter-react-16": "^1.15.6",
+    "jest": "24.1.0",
+    "jest-environment-jsdom": "23.4.0",
+    "jest-enzyme": "7.0.0"
   }
 }
