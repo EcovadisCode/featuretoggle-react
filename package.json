@@ -1,0 +1,15 @@
+{
+  "name": "featuretoggle-react",
+  "version": "0.0.1",
+  "description": "Library to use Feature Toggles of your choice in a React application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "FeatureToggle",
+    "react"
+  ],
+  "author": "Jakub Gawlikowski",
+  "license": "ISC"
+}
