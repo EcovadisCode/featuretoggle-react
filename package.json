@@ -5,9 +5,12 @@
   "main": "lib/",
   "scripts": {
     "build": "rm -rf lib && ./node_modules/.bin/babel src/ -d lib/",
-    "prepare": "npm install babel-cli babel-preset-es2015 babel-preset-react babel-register && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "lib",
+    "src"
+  ],
   "keywords": [
     "FeatureToggle",
     "react"
@@ -21,10 +24,10 @@
     "react": "16.x"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-register": "^6.26.0"
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-react": "^7.13.13"
   }
 }
