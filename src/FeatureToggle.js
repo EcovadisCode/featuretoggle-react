@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 const isDebug = process.env.REACT_APP_DEBUG_FEATURE_TOGGLE === 'true';
 
 export class FeatureToggle extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.handleChange = this.handleChange.bind(this);
 
     this.initProvider();
