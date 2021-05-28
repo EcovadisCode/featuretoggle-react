@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from 'react';
+import React, { Fragment, useEffect, useReducer } from 'react';
 import PropTypes from 'prop-types';
 import {
   startFetchingFeatureToggle,
