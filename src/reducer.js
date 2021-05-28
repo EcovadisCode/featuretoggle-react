@@ -7,6 +7,7 @@ import {
 export const initialState = {
   loaded: false,
   loading: false,
+  features: {},
 };
 
 export const featureToggleReducer = (state = initialState, action) => {
