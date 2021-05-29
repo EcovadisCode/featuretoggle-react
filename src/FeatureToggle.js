@@ -52,9 +52,6 @@ export const FeatureToggle = ({
 FeatureToggle.propTypes = {
   children: PropTypes.node,
   feature: PropTypes.string,
-  provider: PropTypes.shape({
-    init: PropTypes.func,
-  }).isRequired,
   reload: PropTypes.bool,
 };
 
