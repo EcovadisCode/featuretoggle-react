@@ -18,9 +18,7 @@
   "author": "Jakub Gawlikowski",
   "license": "ISC",
   "dependencies": {
-    "prop-types": "15.6.0"
-  },
-  "peerDependencies": {
+    "prop-types": "15.6.0",
     "react": "^16.8"
   },
   "devDependencies": {

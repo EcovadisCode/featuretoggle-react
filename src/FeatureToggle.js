@@ -24,8 +24,6 @@ export const FeatureToggleWrapper = ({
   const [state, dispatch] = useReducer(featureToggleReducer, initialState);
   const updateHandler = (featureToggle) => dispatch(updateFeatureToggle(featureToggle));
 
-  console.log(FeatureToggleContext); // eslint-disable-line
-
   return (
     <FeatureToggleContext.Provider value={{
       state,
