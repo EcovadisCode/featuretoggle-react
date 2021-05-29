@@ -28,10 +28,7 @@ export const FeatureToggleWrapper = ({
       provider,
       updateHandler,
     }}>
-      {console.log({
-        children, state, dispatch, provider, updateHandler
-      })}
-      {/* {children} */}
+      <p>test</p>
     </FeatureToggleContext.Provider>
   );
 };
