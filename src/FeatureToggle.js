@@ -1,10 +1,11 @@
-import React, { Fragment, useEffect, useReducer } from 'react';
+import React, {
+  Fragment,
+  useContext,
+  useEffect,
+} from 'react';
 import PropTypes from 'prop-types';
-import {
-  startFetchingFeatureToggle,
-  updateFeatureToggle,
-} from './actions';
-import { featureToggleReducer, initialState } from './reducer';
+
+import { FeatureToggleContext } from './FeatureToggleWrapper';
 
 const isDebug = process.env.REACT_APP_DEBUG_FEATURE_TOGGLE === 'true';
 
@@ -12,15 +13,23 @@ const isDebug = process.env.REACT_APP_DEBUG_FEATURE_TOGGLE === 'true';
 export const FeatureToggle = ({
   children,
   feature,
-  provider,
   reload
 }) => {
-  const [state, dispatch] = useReducer(featureToggleReducer, initialState);
-  const updateHandler = (featureToggle) => dispatch(updateFeatureToggle(featureToggle));
-
+  const {
+    state,
+    dispatch,
+    provider,
+    updateHandler,
+  } = useContext(FeatureToggleContext);
 
   useEffect(() => {
-    provider.init(updateHandler);
+    if ((!state.isLoaded && !state.isLoading) || reload) {
+      if (isDebug) {
+        console.warn(`Fetching toggle state initiated by "${feature ? feature : 'empty tag'}"`); // eslint-disable-line
+      }
+      dispatch(startFetchingFeatureToggle());
+      provider.init(updateHandler);
+    }
   }, []);
 
   if (!feature) {
