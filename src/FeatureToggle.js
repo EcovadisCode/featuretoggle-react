@@ -1,13 +1,53 @@
 import React, {
+  createContext,
   Fragment,
   useContext,
   useEffect,
+  useReducer,
 } from 'react';
 import PropTypes from 'prop-types';
+
+import {
+  startFetchingFeatureToggle,
+  updateFeatureToggle,
+} from './actions';
+import { featureToggleReducer, initialState } from './reducer';
 
 import { FeatureToggleContext } from './FeatureToggleWrapper';
 
 const isDebug = process.env.REACT_APP_DEBUG_FEATURE_TOGGLE === 'true';
+
+const FeatureToggleContext = createContext();
+
+export const FeatureToggleWrapper = ({
+  children,
+  provider,
+}) => {
+  const [state, dispatch] = useReducer(featureToggleReducer, initialState);
+  const updateHandler = (featureToggle) => dispatch(updateFeatureToggle(featureToggle));
+
+  return (
+    <FeatureToggleContext.Provider value={{
+      state,
+      dispatch,
+      provider,
+      updateHandler,
+    }}>
+      {children}
+    </FeatureToggleContext.Provider>
+  );
+};
+
+FeatureToggle.propTypes = {
+  children: PropTypes.node,
+  provider: PropTypes.shape({
+    init: PropTypes.func,
+  }).isRequired,
+};
+
+FeatureToggle.defaultProps = {
+  children: null,
+};
 
 
 export const FeatureToggle = ({

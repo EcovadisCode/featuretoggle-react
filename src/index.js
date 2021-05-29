@@ -1,7 +1,3 @@
-export { FeatureToggle } from './FeatureToggle';
+export { FeatureToggle, FeatureToggleWrapper } from './FeatureToggle';
 export { On } from './On';
 export { Off } from './Off';
-export {
-  FeatureToggleContext,
-  FeatureToggleWrapper,
-} from './FeatureToggleWrapper';
