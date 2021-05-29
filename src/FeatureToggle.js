@@ -36,14 +36,14 @@ export const FeatureToggleWrapper = ({
   );
 };
 
-FeatureToggle.propTypes = {
+FeatureToggleWrapper.propTypes = {
   children: PropTypes.node,
   provider: PropTypes.shape({
     init: PropTypes.func,
   }).isRequired,
 };
 
-FeatureToggle.defaultProps = {
+FeatureToggleWrapper.defaultProps = {
   children: null,
 };
 
