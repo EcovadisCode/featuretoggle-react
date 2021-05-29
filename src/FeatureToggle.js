@@ -13,8 +13,6 @@ import {
 } from './actions';
 import { featureToggleReducer, initialState } from './reducer';
 
-import { FeatureToggleContext } from './FeatureToggleWrapper';
-
 const isDebug = process.env.REACT_APP_DEBUG_FEATURE_TOGGLE === 'true';
 
 const FeatureToggleContext = createContext();
