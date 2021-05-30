@@ -18,6 +18,7 @@
   "author": "Jakub Gawlikowski",
   "license": "ISC",
   "dependencies": {
+    "@optimizely/optimizely-sdk": "^4.6.0",
     "prop-types": "15.6.0",
     "react": "^16.8"
   },
