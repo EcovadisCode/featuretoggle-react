@@ -12,8 +12,6 @@ export const featureToggleReducer = (state = initialState, action) => {
       return {
         ...state,
         ...action.payload,
-        loaded: true,
-        loading: false,
       };
     default:
       return {
