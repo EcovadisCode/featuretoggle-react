@@ -23,6 +23,7 @@ export const FeatureToggleWrapper = ({
 
   return (
     <FeatureToggleContext.Provider value={{
+      dispatch,
       state,
       provider,
       updateHandler,
@@ -49,12 +50,15 @@ export const FeatureToggle = ({
   feature,
 }) => {
   const {
+    dispatch,
     state,
     provider,
     updateHandler,
   } = useContext(FeatureToggleContext);
 
   useEffect(() => {
+    if (!state.isLoaded && !state.isLoading) {
+      dispatch(startFetchingFeatureToggle());
       provider.init(updateHandler);
   }, []);
 
