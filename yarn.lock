@@ -1866,6 +1866,11 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
+flagsmith@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/flagsmith/-/flagsmith-1.4.1.tgz#11963f466377fc5b9cad217aa8a8d1539c2e5062"
+  integrity sha512-l4UmU4FPO7JLN1+rcCSsfkWvRF5Y4g3magDAbFp1S2Zs9xUiFiWDoNPLcU4W0idvmbfAXfKbbNe3iaJYDW0wfQ==
+
 for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
