@@ -20,9 +20,7 @@
   "dependencies": {
     "@optimizely/optimizely-sdk": "^4.6.0",
     "flagsmith": "^1.4.1",
-    "prop-types": "15.6.0"
-  },
-  "peerDependencies": {
+    "prop-types": "15.6.0",
     "react": "^16.8",
     "react-dom": "^16.8"
   },
