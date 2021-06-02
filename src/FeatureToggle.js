@@ -5,7 +5,6 @@ import React, {
   useEffect,
   useReducer,
 } from 'react';
-import PropTypes from 'prop-types';
 
 import {
   updateFeatureToggle,
@@ -31,18 +30,6 @@ export const FeatureToggleWrapper = ({
     </FeatureToggleContext.Provider>
   );
 };
-
-FeatureToggleWrapper.propTypes = {
-  children: PropTypes.node,
-  provider: PropTypes.shape({
-    init: PropTypes.func,
-  }).isRequired,
-};
-
-FeatureToggleWrapper.defaultProps = {
-  children: null,
-};
-
 
 export const FeatureToggle = ({
   children,
@@ -73,14 +60,4 @@ export const FeatureToggle = ({
       {toggledChildren}
     </Fragment>
   );
-};
-
-FeatureToggle.propTypes = {
-  children: PropTypes.node,
-  feature: PropTypes.string,
-};
-
-FeatureToggle.defaultProps = {
-  children: null,
-  feature: null,
 };
