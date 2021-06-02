@@ -74,3 +74,15 @@ export default function App() {
 }
 ```
 The `featuretoggle-react` module will fetch the toggle state from the relevant service provider and display the toggled state according to the received data.
+
+You can also create your own provider along those lines:
+
+```
+const provider = {
+  init: (handler) => {
+    const featureToggles = {};
+    // call your endpoint or insert mock values into featureToggles here
+    handler(featureToggles);
+  }
+};
+```
