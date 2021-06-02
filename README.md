@@ -20,7 +20,7 @@ or:
 
 import the required dependencies:
 
-```
+```js
 import {
   FeatureToggleWrapper,
   flagsmithClient, // or
@@ -33,7 +33,7 @@ import {
 
 Initialize one of the Clients provided: `flagsmithClient` or `optimizelyClient`:
 
-```
+```js
 const provider = flagsmithClient({
   environmentID: "xxxxxxxxxxxxxxxxxxxxx"
 });
@@ -41,7 +41,7 @@ const provider = flagsmithClient({
 
 or:
 
-```
+```js
 const provider = optimizelyClient({
   audience: 'xxxxxxxxxxxx',
   sdkKey: 'xxxxxxxxxxxxxxx',
@@ -49,7 +49,7 @@ const provider = optimizelyClient({
 ```
 Use the FeatureToggle:
 
-```
+```js
 export default function App() {
   return (
     <FeatureToggleWrapper provider={provider}>
@@ -77,7 +77,7 @@ The `featuretoggle-react` module will fetch the toggle state from the relevant s
 
 You can also create your own provider along those lines:
 
-```
+```js
 const provider = {
   init: (handler) => {
     const featureToggles = {};
