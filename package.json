@@ -18,7 +18,8 @@
   "license": "ISC",
   "dependencies": {
     "@optimizely/optimizely-sdk": "^4.6.0",
-    "flagsmith": "^1.4.1"
+    "flagsmith": "^1.4.1",
+    "launchdarkly-react-client-sdk": "^2.22.2"
   },
   "peerDependencies": {
     "react": ">=16.8.0",

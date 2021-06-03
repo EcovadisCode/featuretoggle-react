@@ -23,15 +23,16 @@ import the required dependencies:
 ```js
 import {
   FeatureToggleWrapper,
-  flagsmithClient, // or
-  optimizelyClient, // alternatively
+  flagsmithClient,
+  optimizelyClient, // or alternatively
+  launchdarklyClient, // or alternatively
   FeatureToggle,
   On,
   Off,
  } from "featuretoggle-react";
 ```
 
-Initialize one of the Clients provided: `flagsmithClient` or `optimizelyClient`:
+Initialize one of the Clients provided: `flagsmithClient`, `optimizelyClient` or `launchdarklyClient`:
 
 ```js
 const provider = flagsmithClient({
@@ -46,6 +47,18 @@ const provider = optimizelyClient({
   audience: 'xxxxxxxxxxxx',
   sdkKey: 'xxxxxxxxxxxxxxx',
 });
+```
+
+or:
+
+```js
+const provider = launchdarklyClient({
+  clientSideId: 'xxxxxxxxxxxxxxxx',
+  user: {
+    key: 'xxxxxxxxx',
+  },
+});
+
 ```
 Use the FeatureToggle:
 
