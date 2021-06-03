@@ -10,7 +10,7 @@ https://medium.com/ecovadis-engineering/using-feature-toggle-in-a-react-applicat
 
 Install the module using:
 
-`npm install featuretoggle-react`
+`npm install --save featuretoggle-react`
 
 or:
 
