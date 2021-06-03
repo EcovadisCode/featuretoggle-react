@@ -12,7 +12,9 @@
   ],
   "keywords": [
     "FeatureToggle",
-    "React"
+    "React",
+    "toggles",
+    "flags"
   ],
   "author": "Jakub Gawlikowski",
   "license": "ISC",
