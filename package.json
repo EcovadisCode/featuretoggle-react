@@ -1,6 +1,6 @@
 {
   "name": "featuretoggle-react",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Library to use Feature Toggles of your choice in a React application",
   "main": "lib/",
   "scripts": {
