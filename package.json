@@ -11,10 +11,14 @@
     "src"
   ],
   "keywords": [
-    "FeatureToggle",
     "React",
+    "Optimizely",
+    "Flagsmith",
+    "LaunchDarkly",
     "toggles",
-    "flags"
+    "flags",
+    "feature toggle",
+    "feature flag"
   ],
   "author": "Jakub Gawlikowski",
   "license": "ISC",
