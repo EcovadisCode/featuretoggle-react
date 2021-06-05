@@ -99,3 +99,4 @@ const provider = {
   }
 };
 ```
+**Warning:** reloads and updates are not handled in this version. This is planned for version 2.x. Currently, the feature toggles are fetched and updated only once, when the first `<FeatureToggle>` element is rendered.
