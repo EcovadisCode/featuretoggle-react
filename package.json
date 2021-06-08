@@ -21,7 +21,11 @@
     "feature flag"
   ],
   "author": "Jakub Gawlikowski",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EcovadisCode/featuretoggle-react.git"
+  },
   "dependencies": {
     "@optimizely/optimizely-sdk": "^4.6.0",
     "flagsmith": "^1.4.1",
