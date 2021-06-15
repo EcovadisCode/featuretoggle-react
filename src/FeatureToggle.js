@@ -25,7 +25,8 @@ export const FeatureToggleWrapper = ({
       state,
       provider,
       updateHandler,
-    }}>
+    }}
+    >
       {children}
     </FeatureToggleContext.Provider>
   );
@@ -51,7 +52,7 @@ export const FeatureToggle = ({
 
   const featureToggleEnabled = state.features[feature];
 
-  const toggledChildren = React.Children.map(children, child => React.cloneElement(child, {
+  const toggledChildren = React.Children.map(children, (child) => React.cloneElement(child, {
     featureToggleEnabled,
   }));
 

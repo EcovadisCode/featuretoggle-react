@@ -1,0 +1,39 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "react-app"
+  ],
+  "env": {
+    "mocha": true
+  },
+  "rules": {
+    "comma-dangle": [
+      "error", {
+        "arrays": "always-multiline",
+        "exports": "always-multiline",
+        "imports": "always-multiline",
+        "objects": "always-multiline",
+        "functions": "never"
+      }
+    ],
+    "react/jsx-fragments": "off",
+    "react/prop-types": "off",
+    "function-paren-newline":"off",
+    "react/jsx-filename-extension": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-return-assign": "off",
+    "no-underscore-dangle": [
+      "warn"
+    ],
+    "no-trailing-spaces": [
+      "error",
+      {
+        "skipBlankLines": true
+      }
+    ]
+  }
+}

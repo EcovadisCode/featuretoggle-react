@@ -1,6 +1,6 @@
-import { initialize } from "launchdarkly-js-client-sdk";
+import { initialize } from 'launchdarkly-js-client-sdk';
 
-class launchdarklyClientClass {
+class LaunchdarklyClientClass {
   constructor({ clientSideId, user }) {
     this.fetching = false;
     this.clientSideId = clientSideId;
@@ -23,7 +23,7 @@ class launchdarklyClientClass {
 export const launchdarklyClient = ({
   clientSideId,
   user,
-}) => new launchdarklyClientClass({
+}) => new LaunchdarklyClientClass({
   clientSideId,
   user,
 });
