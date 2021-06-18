@@ -9,11 +9,11 @@ export const optimizelyClient = ({
   });
 
   return {
-    init: handler => {
+    init: (handler) => {
       optimizelyClientInstance.onReady().then(() => {
         const featureToggles = {};
         const features = optimizelyClientInstance.getEnabledFeatures(audience);
-        features.forEach(feature => {
+        features.forEach((feature) => {
           featureToggles[feature] = true;
         });
         handler(featureToggles);

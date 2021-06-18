@@ -1,6 +1,6 @@
-import flagsmith from "flagsmith";
+import flagsmith from 'flagsmith';
 
-class flagsmithClientClass {
+class FlagsmithClientClass {
   constructor({ environmentID }) {
     this.fetching = false;
     this.environmentID = environmentID;
@@ -12,21 +12,21 @@ class flagsmithClientClass {
       environmentID: this.environmentID,
       onChange: () => {
         const state = flagsmith.getState();
-        handler(this.transform(state));
-      }
+        handler(this.constructor.transform(state));
+      },
     });
     this.fetching = true;
   }
 
-  transform(state) {
+  static transform(state) {
     const { flags } = state;
     const featureFlags = {};
-    Object.keys(flags).forEach(flag => featureFlags[flag] = flags[flag].enabled);
+    Object.keys(flags).forEach((flag) => featureFlags[flag] = flags[flag].enabled);
 
     return featureFlags;
   }
 }
 
-export const flagsmithClient = ({ environmentID }) => new flagsmithClientClass({
+export const flagsmithClient = ({ environmentID }) => new FlagsmithClientClass({
   environmentID,
 });
