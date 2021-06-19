@@ -2,3 +2,5 @@ node_modules
 .yarnclean
 yarn-error.log
 lib
+test_setup/node_modules
+.vscode
