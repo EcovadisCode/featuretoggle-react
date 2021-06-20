@@ -5,9 +5,9 @@
   "main": "lib/",
   "scripts": {
     "build": "rm -rf lib && ./node_modules/.bin/babel src/ -d lib/",
-    "postinstall": "cd test_setup && yarn",
+    "prepare-test": "cd test_setup && yarn",
     "lint": "./node_modules/.bin/eslint src --ext .js",
-    "test": "yarn lint && jest"
+    "test": "yarn prepare-test && yarn lint && jest"
   },
   "files": [
     "lib",
