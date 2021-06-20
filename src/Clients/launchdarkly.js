@@ -1,6 +1,6 @@
 import { initialize } from 'launchdarkly-js-client-sdk';
 
-class LaunchdarklyClientClass {
+export class LaunchdarklyClientClass {
   constructor({ clientSideId, user }) {
     this.fetching = false;
     this.clientSideId = clientSideId;

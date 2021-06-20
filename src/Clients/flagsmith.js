@@ -1,6 +1,6 @@
 import flagsmith from 'flagsmith';
 
-class FlagsmithClientClass {
+export class FlagsmithClientClass {
   constructor({ environmentID }) {
     this.fetching = false;
     this.environmentID = environmentID;
